@@ -1,0 +1,21 @@
+%h1 Listing kopies
+
+%table
+  %tr
+    %th Title
+    %th Body
+    %th
+    %th
+    %th
+
+  - @kopies.each do |kopy|
+    %tr
+      %td= kopy.title
+      %td= kopy.body
+      %td= link_to 'Show', kopy
+      %td= link_to 'Edit', edit_kopy_path(kopy)
+      %td= link_to 'Destroy', kopy, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New kopy', new_kopy_path

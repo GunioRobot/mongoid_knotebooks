@@ -1,0 +1,18 @@
+%p
+  - if @original == @knote
+    Now Viewing Current Version
+  - else
+    == Now Viewing Version #{@version}
+%p
+  %b Title:
+  = @knote.title
+%p
+  %b Body:
+  = @knote.body
+%p
+  %b Version:
+  = @knote.version
+
+= link_to "Edit Current Version(#{@original.version})", edit_knote_path(@original)
+\|
+= link_to 'Back', knotes_path

@@ -1,0 +1,17 @@
+%h1 Listing knotebooks
+
+%table
+  %tr
+    %th Title
+    %th Abstract
+    %th # Knotes
+    %th Tags
+    %th
+    %th
+    %th
+
+  = render @knotebooks
+
+%br
+
+= link_to 'New knotebook', new_knotebook_path

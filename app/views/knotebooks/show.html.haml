@@ -1,0 +1,12 @@
+%p
+  %b Title:
+  = @knotebook.title
+%p
+  %b Abstract:
+  = @knotebook.abstract
+
+= render :partial => 'kopies/kopy', :collection => @knotebook.knotes, :as => :knote
+
+= link_to 'Edit', edit_knotebook_path(@knotebook)
+\|
+= link_to 'Back', knotebooks_path

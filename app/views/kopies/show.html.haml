@@ -1,0 +1,10 @@
+%p
+  %b Title:
+  = @kopy.title
+%p
+  %b Body:
+  = @kopy.body
+
+= link_to 'Edit', edit_kopy_path(@kopy)
+\|
+= link_to 'Back', kopies_path

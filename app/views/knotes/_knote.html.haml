@@ -1,0 +1,7 @@
+%tr
+  %td= knote.title
+  %td= knote.body
+  %td= knote.version
+  %td= link_to 'Show', knote
+  %td= link_to 'Edit', edit_knote_path(knote)
+  %td= link_to 'Destroy', knote, :confirm => 'Are you sure?', :method => :delete

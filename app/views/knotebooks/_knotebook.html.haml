@@ -1,0 +1,8 @@
+%tr
+  %td= knotebook.title
+  %td= knotebook.abstract
+  %td= knotebook.knotes.count
+  %td= knotebook.tags.join ", "
+  %td= link_to 'Show', knotebook
+  %td= link_to 'Edit', edit_knotebook_path(knotebook)
+  %td= link_to 'Destroy', knotebook, :confirm => 'Are you sure?', :method => :delete

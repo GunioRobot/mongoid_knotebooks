@@ -1,0 +1,16 @@
+%h1 Listing knotes
+
+%table
+  %tr
+    %th Title
+    %th Body
+    %th Version
+    %th
+    %th
+    %th
+
+  = render @knotes
+
+%br
+
+= link_to 'New knote', new_knote_path
