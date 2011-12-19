@@ -16,9 +16,9 @@ class Knotebook
     add(knote)
     save
   end
-  
+
   def tags
     knotes.collect(&:tags).flatten.uniq.sort
   end
-  
+
 end

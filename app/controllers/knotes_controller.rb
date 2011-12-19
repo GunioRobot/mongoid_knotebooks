@@ -19,7 +19,7 @@ class KnotesController < ApplicationController
       @version = params[:version].to_i
       @knote = @knote.versions[@version - 1] if (0...@knote.versions.size).include?(@version - 1)
     end
-    
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @knote }
@@ -85,7 +85,7 @@ class KnotesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
+
   def swap
     @original = Knote.find(params[:id])
     @knote = @original.similar.random_element

@@ -6,10 +6,10 @@ class Kopy
   field :title, :type => String
   field :body, :type => String
   field :tags, :type => Array
-  
+
   embedded_in :knotebook, :inverse_of => :knotes
   referenced_in :knote
-  
+
   validates_presence_of :title, :body, :tags
-  
+
 end
